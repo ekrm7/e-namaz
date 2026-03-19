@@ -69,3 +69,33 @@ body {
 .baslikVakit {
     font-family: 'Red Hat Display', sans-serif;
 }
+@media (max-width: 480px) {
+    .contentCenter {
+        width: 95%;
+        padding: 20px 10px;
+        min-height: auto;
+    }
+
+    .mainContent {
+        gap: 10px;
+    }
+
+    .vakitSatiri {
+        width: calc(50% - 10px); 
+        height: 100px;
+    }
+
+    .vakitSaati {
+        font-size: 1.3rem;
+    }
+
+    .vakitAdi {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .vakitSatiri {
+        width: 100%;
+    }
+}
