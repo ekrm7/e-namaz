@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Namaz Vakitleri</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&family=Red+Hat+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@900&family=Red+Hat+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <main class="container">
         <div class="contentCenter">
-            
+
             <h2 class="baslikVakit">Namaz Vakitleri</h2>
 
             <div class="mainContent">
@@ -48,8 +52,24 @@
             </div>
 
         </div>
+
+        <div class="settingsCard">
+            <label for="sehirSecici">Bölge Seçimi</label>
+            <select id="sehirSecici" onchange="sehirDegisti()">
+                <option value="Istanbul">İstanbul</option>
+                <option value="Ankara">Ankara</option>
+                <option value="Izmir">İzmir</option>
+                <option value="Bursa">Bursa</option>
+                <option value="Denizli">Denizli</option>
+                <option value="Antalya">Antalya</option>
+                <option value="Konya">Konya</option>
+                <option value="Adana">Adana</option>
+            </select>
+        </div>
+
     </main>
 
     <script src="app.js"></script>
 </body>
+
 </html>
