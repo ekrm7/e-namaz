@@ -1,42 +1,58 @@
-body {
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
     min-height: 100vh;
     background: #F7E7CE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .contentCenter {
     background: #102C26;
-    margin: 5vh auto;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
-    min-height: 400px;
+    min-height: 650px;
     border-radius: 35px;
     color: #F7E7CE;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
+    justify-content: space-between;
+    padding: 40px 20px;
+}
+
+.baslikVakit {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.8rem;
 }
 
 .mainContent {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 15px;
+    width: 100%;
+    margin: 20px 0;
 }
 
 .vakitSatiri {
     background: #F7E7CE;
     border-radius: 20px;
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 115px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,10 +64,9 @@ body {
 .vakitAdi {
     color: #102C26;
     font-family: 'Red Hat Mono', monospace;
-    font-size: 0.85rem;
-    font-weight: 400;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .vakitSaati {
@@ -59,43 +74,67 @@ body {
     font-family: 'Red Hat Display', sans-serif;
     font-size: 1.6rem;
     font-weight: 900;
-    letter-spacing: -1px;
 }
 
 .vakitSatiri:hover {
     transform: scale(1.05);
 }
 
-.baslikVakit {
-    font-family: 'Red Hat Display', sans-serif;
+.sayacKonteyner {
+    width: 100%;
+    background: rgba(247, 231, 206, 0.05);
+    border: 1px solid rgba(247, 231, 206, 0.1);
+    border-radius: 25px;
+    padding: 30px 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+#vakitIsmi {
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+#sayac {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 10px 0;
+    line-height: 1;
+}
+
+.sayacCizgi {
+    width: 40px;
+    height: 3px;
+    background: #F7E7CE;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 @media (max-width: 480px) {
     .contentCenter {
-        width: 95%;
-        padding: 20px 10px;
-        min-height: auto;
-    }
-
-    .mainContent {
-        gap: 10px;
+        min-height: 600px;
+        padding: 30px 15px;
     }
 
     .vakitSatiri {
-        width: calc(50% - 10px); 
+        flex: 0 1 calc(45% - 5px);
+        min-width: 120px;
         height: 100px;
     }
 
-    .vakitSaati {
-        font-size: 1.3rem;
-    }
-
-    .vakitAdi {
-        font-size: 0.75rem;
+    #sayac {
+        font-size: 2.8rem;
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 330px) {
     .vakitSatiri {
-        width: 100%;
+        flex: 0 1 100%;
     }
 }
