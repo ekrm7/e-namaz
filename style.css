@@ -15,8 +15,10 @@ body {
 .container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
@@ -24,7 +26,7 @@ body {
     background: #102C26;
     width: 100%;
     max-width: 500px;
-    min-height: 650px;
+    min-height: 600px;
     border-radius: 35px;
     color: #F7E7CE;
     display: flex;
@@ -45,19 +47,17 @@ body {
     justify-content: center;
     gap: 15px;
     width: 100%;
-    margin: 20px 0;
 }
 
 .vakitSatiri {
     background: #F7E7CE;
     border-radius: 20px;
     width: 130px;
-    height: 115px;
+    height: 110px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
     transition: transform 0.3s ease;
 }
 
@@ -87,9 +87,6 @@ body {
     border-radius: 25px;
     padding: 30px 15px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #vakitIsmi {
@@ -97,14 +94,13 @@ body {
     font-size: 1rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    opacity: 0.9;
 }
 
 #sayac {
     font-family: 'Red Hat Display', sans-serif;
     font-size: 3.5rem;
     font-weight: 900;
-    margin: 10px 0;
+    margin: 5px 0;
     line-height: 1;
 }
 
@@ -113,10 +109,52 @@ body {
     height: 3px;
     background: #F7E7CE;
     border-radius: 10px;
-    margin-top: 10px;
+    margin: 10px auto 0;
+}
+
+.settingsCard {
+    background: #102C26;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(247, 231, 206, 0.1);
+}
+
+.settingsCard label {
+    color: #F7E7CE;
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#sehirSecici {
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    border-radius: 12px;
+    background: #F7E7CE;
+    color: #102C26;
+    font-family: 'Red Hat Mono', monospace;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        gap: 15px;
+    }
+
     .contentCenter {
         min-height: 600px;
         padding: 30px 15px;
@@ -131,10 +169,8 @@ body {
     #sayac {
         font-size: 2.8rem;
     }
-}
 
-@media (max-width: 330px) {
-    .vakitSatiri {
-        flex: 0 1 100%;
+    .settingsCard {
+        padding: 20px;
     }
 }
