@@ -1,7 +1,7 @@
 let vakitZamanlari = {};
 
 window.onload = () => {
-    namazVakitleriniGetir("Istanbul");
+    namazVakitleriniGetir("Denizli");
 };
 
 async function sehirDegisti() {
